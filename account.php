@@ -2,6 +2,9 @@
 
 session_start();
 
+$cook = $_COOKIE['cook'] ?? 'Unknown';
+$newcook = filter_var($cook, FILTER_SANITIZE_STRING); 
+
 include("db/db.php");
 
 
@@ -99,16 +102,17 @@ if(isset($message)){
                 <br><br>
                 </form>
 
-                <a href="home.php" name="logout" onclick="confirmLogout()">Log out</a>
-                <script> function confirmLogout() { 
-                        <?php
-                        session_start();
-                        session_destroy();
-                        ?>
-                    return confirm("Are you sure you want to logout?");
-        
-      }
-    </script>
+                <a href="home.php" name="logout" onclick="return confirmLogout()"><?php  session_unset(); session_destroy();?>Log out</a>
+
+                <script>
+                    function confirmLogout() {
+                        return confirm("Are you sure you want to logout?");
+                    }
+                </script>
+
+
+             
+                    
 
                  <br><br><br><br><br><br><br><br><br><br><br>
                  <br><br><br><br><br><br><br><br>

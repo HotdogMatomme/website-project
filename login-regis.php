@@ -1,11 +1,10 @@
 <?php
-    session_start();
-
+      session_start();
     include("db/db.php");
 
     if(isset($_POST['submit']))
     {
-    
+        
         $name = mysqli_real_escape_string($con, $_POST['name']);
         $email = mysqli_real_escape_string($con, $_POST['email']);
         $password = mysqli_real_escape_string($con, $_POST['pass']);
@@ -25,6 +24,10 @@
 
     if(isset($_POST['submit1'])){
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
+
+     
+        setCookie('cook', $_POST['email'], time() + 1000 );
+
         $email = $_POST['email'];
         $password = $_POST['pass'];
     
