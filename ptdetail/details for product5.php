@@ -16,7 +16,7 @@
         <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="home.html"><img src="../images/logo.png" width="45px"></a>
+                <a href="../home.php"><img src="../images/logo1.png" width="45px"></a>
                 </div>
                 <nav> 
                     <ul id="MenuItems">
@@ -27,7 +27,7 @@
                         <li><a href="for account.html">Account</a></li>
                     </ul>
                 </nav>
-                <a href="for cart.html"><img src="cart.png"></a>
+                <a href="for cart.php"><img src="cart.png"></a>
                 <img src="menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
             </div>
@@ -37,17 +37,17 @@
             <div class="small-container single-product">
                 <div class="row">
                     <div class="col-2">
-                        <img src="product5.jpg" width="100%" id="ProductImg">
+                        <img src="../images/product5.jpg" width="100%" id="ProductImg">
 
                         <div class="small-img-row">
                             <div class="small-img-col">
-                                <img src="product5.jpg" width="100%" class="small-img">
+                                <img src="../images/product5.jpg" width="100%" class="small-img">
                             </div>
                             <div class="small-img-col">
-                                <img src="product5-1.jpg" width="100%" class="small-img">
+                                <img src="../images/product5-1.jpg" width="100%" class="small-img">
                             </div>
                             <div class="small-img-col">
-                                <img src="product5-2.jpg" width="100%" class="small-img">
+                                <img src="../images/product5-2.jpg" width="100%" class="small-img">
                             </div>
                         </div>
                     </div>
@@ -63,8 +63,8 @@
                             <option>Medium</option> 
                             <option>Small</option> 
                         </select>
-                        <input type="number" value="1">
-                        <a href="" class="btn"> Add to Cart</a>
+                        <a href="../login-regis.php" class="btn-a"><button class="btn">Buy </a></button>
+                        <a href="../login-regis.php" class="btn-a"><button class="btn"> Add to Cart</a></button>
 
                         <h3>Product Details</h3>
                         <br>
@@ -78,7 +78,7 @@
                     <div class="small-container">
                         <div class="row row-2">
                             <h2>Related Products</h2>
-                            <a href="product.html"><p>View More</p></a>
+                            <a href="product.php"><p>View More</p></a>
                         </div>
                     </div>
 
@@ -87,18 +87,18 @@
                 <div class="small-container">
                     <div class="row">
                         <div class="col-4"> 
-                            <a href="details for featured4.html"><img src="Featured4.jpg"> </a>
-                            <a href="details for featured4.html"><h4> Hoodie Black </h4></a>
+                            <a href="details for featured4.php"><img src="../images/Featured4.jpg"> </a>
+                            <a href="details for featured4.php"><h4> Hoodie Black </h4></a>
                             <p> ₱2873.00 </p>
                             </div>
                             <div class="col-4"> 
-                                <a href="details for product12.html"><img src="product12.jpg"> </a>
-                                <a href="details for product12.html"><h4> T Shirt Purple </h4></a>
+                                <a href="details for product12.php"><img src="../images/product12.jpg"> </a>
+                                <a href="details for product12.php"><h4> T Shirt Purple </h4></a>
                                 <p> ₱958.00 </p>
                                 </div>
                                 <div class="col-4"> 
-                                    <a href="details for product7.html"><img src="product7.jpg"> </a>
-                                    <a href="details for product7.html"><h4> T Shirt Grey </h4></a>
+                                    <a href="details for product7.php"><img src="../images/product7.jpg"> </a>
+                                    <a href="details for product7.php"><h4> T Shirt Grey </h4></a>
                                     <p> ₱1916.00 </p>
                                     </div>
                     </div>           
@@ -111,12 +111,12 @@
                             <div class="footer-col-1">
                                 <h3> Download Our App </h3>
                                 <div class="app-logo">
-                                    <img src="PS.png">
-                                    <img src="AS.png">
+                                    <img src="../images/PS.png">
+                                    <img src="../images/AS.png">
                                 </div>
                             </div>
                             <div class="footer-col-2">
-                                <img src="logo.png" width="45px">
+                                <img src="../images/logo1white.png" width="45px">
                                 <p> STORE THAT SUPPORT ALL KINDS OF STYLE AND PREFERENCE </p>
                             </div>
                             <div class="footer-col-3">
@@ -185,4 +185,9 @@
 
 
     </body>
+    <style>
+        .btn-a{
+            color: white;
+        }
+    </style>
     </html>

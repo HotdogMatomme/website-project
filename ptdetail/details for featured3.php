@@ -16,7 +16,7 @@
         <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="home.php"><img src="logo.png" width="45px"></a>
+                <a href="home.php"><img src="../images/logo1.png" width="45px"></a>
                 </div>
                 <nav> 
                     <ul id="MenuItems">
@@ -27,7 +27,7 @@
                         <li><a href="for account.php">Account</a></li>
                     </ul>
                 </nav>
-                <a href="for cart.html"><img src="cart.png"></a>
+                <a href="for cart.html"><img src="../images/cart.png"></a>
                 <img src="menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
             </div>
@@ -64,7 +64,8 @@
                             <option>Small</option> 
                         </select>
                         <input type="number" value="1">
-                        <a href="" class="btn"> Add to Cart</a>
+                        <a href="../login-regis.php" class="btn-a"><button class="btn">Buy </a></button>
+                        <a href="../login-regis.php" class="btn-a"><button class="btn"> Add to Cart</a></button>
 
                         <h3>Product Details</h3>
                         <br>
@@ -111,12 +112,12 @@
                             <div class="footer-col-1">
                                 <h3> Download Our App </h3>
                                 <div class="app-logo">
-                                    <img src="PS.png">
-                                    <img src="AS.png">
+                                    <img src="../images/PS.png">
+                                    <img src="../images/AS.png">
                                 </div>
                             </div>
                             <div class="footer-col-2">
-                                <img src="logo.png" width="45px">
+                                <img src="../images/logo1white.png" width="45px">
                                 <p> STORE THAT SUPPORT ALL KINDS OF STYLE AND PREFERENCE </p>
                             </div>
                             <div class="footer-col-3">
@@ -185,4 +186,9 @@
 
 
     </body>
+    <style>
+        .btn-a{
+            color: white;
+        }
+    </style>
     </html>

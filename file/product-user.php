@@ -16,7 +16,7 @@
         <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="../home-user.php"><img src="../images/logo.png" width="45px"></a>
+                <a href="../home-user.php"><img src="../images/logo1.png" width="45px"></a>
                 </div>
                 <nav> 
                     <ul id="MenuItems">
@@ -25,9 +25,10 @@
                         <li><a href="about us-user.php">About</a></li>
                         <li><a href="contact-user.php">Contact</a></li>
                         <li><a href="../account.php">Account</a></li>
+                        <li><a href="../orders.php">Order</a></li>
                     </ul>
                 </nav>
-                <a href="for cart.html"><img src="../images/cart.png"></a>
+                <a href="../for cart.php"><img src="../images/cart.png"></a>
                 <img src="../images/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
             </div>
@@ -128,7 +129,7 @@
                                 </div>
                             </div>
                             <div class="footer-col-2">
-                                <img src="../images/logo.png" width="45px">
+                                <img src="../images/logo1white.png" width="45px">
                                 <p> STORE THAT SUPPORT ALL KINDS OF STYLE AND PREFERENCE </p>
                             </div>
                             <div class="footer-col-3">

@@ -16,7 +16,7 @@
         <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="home.php"><img src="../images/logo.png" width="45px"></a>
+                <a href="../home.php"><img src="../images/logo1.png" width="45px"></a>
                 </div>
                 <nav> 
                     <ul id="MenuItems">
@@ -111,12 +111,12 @@
                             <div class="footer-col-1">
                                 <h3> Download Our App </h3>
                                 <div class="app-logo">
-                                    <img src="PS.png">
-                                    <img src="AS.png">
+                                    <img src="../images/PS.png">
+                                    <img src="../images/AS.png">
                                 </div>
                             </div>
                             <div class="footer-col-2">
-                                <img src="logo.png" width="45px">
+                                <img src="../images/logo1white.png" width="45px">
                                 <p> STORE THAT SUPPORT ALL KINDS OF STYLE AND PREFERENCE </p>
                             </div>
                             <div class="footer-col-3">
@@ -185,4 +185,9 @@
 
 
     </body>
+    <style>
+        .btn-a{
+            color: white;
+        }
+    </style>
     </html>

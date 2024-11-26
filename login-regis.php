@@ -1,5 +1,6 @@
 <?php
       session_start();
+      
     include("db/db.php");
 
     if(isset($_POST['submit']))
@@ -12,12 +13,24 @@
         $select = mysqli_query($con, "SELECT * FROM users WHERE email = '$email'") or die('query failed');
         
         if(mysqli_num_rows($select) > 0){
-            $message[] ='user already exist!';
+            $message[] ='  <div class="col-sm-12">
+        <div class="alert fade alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert">
+    
+          <strong class="font__weight-semibold">user already exist!</strong>          
+        </div>
+      </div>
+     ';
         }
         else {
            mysqli_query($con, "INSERT INTO users (name, email, pass) values ('$name', '$email', '$password')")
             or die('query failed');
-            $message[] ='registered successfully!';
+            $message[] ='<div class="col-sm-12">
+        <div class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
+
+          <i class="start-icon far fa-check-circle faa-tada animated"></i>
+          <strong class="font__weight-semibold">registered successfully!</strong>
+        </div>
+      </div>';
         
         }
     }
@@ -34,8 +47,8 @@
         if (!empty($email) && !empty($password)) {
             $query = "SELECT * FROM users WHERE email='$email' LIMIT 1";
             $result = mysqli_query($con, $query);
-    
-            
+
+        
             if ($result) {
                 if (mysqli_num_rows($result) > 0) {
                     $user_data = mysqli_fetch_assoc($result);
@@ -43,22 +56,55 @@
                     if ($user_data['pass'] == $password) {
                         
                         $_SESSION['id'] = $user_data['ID']; 
-                        $_SESSION['Name'] = $user_data['name']; // Assuming 'fname' is the field for first name
-                        $_SESSION['email'] = $user_data['email']; // Assuming 'email' is the field for email
+                        $_SESSION['user_id'] = $user_data['ID'];
+                        $_SESSION['name'] = $user_data['name']; 
+                        $_SESSION['email'] = $user_data['email']; 
                         $_SESSION['adds'] = $user_data['address']; 
                         $_SESSION['contactnumber'] = $user_data['cnum']; 
                          
-                       
-    
                         header("location:account.php");
                         die;
                     }
                 }
             }
-            $message[] ='wrong username or password';
+            $message[] ='<section class="message"  id="removenotif">
+       <div class="square_box box_three"></div>
+       <div class="square_box box_four"></div>
+
+     
+            <div class="col-sm-12">
+        <div class="alert fade alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert">
+    
+          <strong class="font__weight-semibold">wrong username or password!</strong> Change a few things up and try submitting again.
+          
+        </div>
+      </div>
+     
+          
+           </div>
+    
+    
+     </section>';;
     
         } else {
-            $message[] ='wrong username or password';
+            $message[] ='<section class="message"  id="removenotif">
+       <div class="square_box box_three"></div>
+       <div class="square_box box_four"></div>
+
+     
+            <div class="col-sm-12">
+        <div class="alert fade alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert">
+    
+          <strong class="font__weight-semibold">wrong username or password!</strong> Change a few things up and try submitting again.
+          
+        </div>
+      </div>
+     
+          
+           </div>
+    
+    
+     </section>';
         }
     }
 }
@@ -71,21 +117,23 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="refresh" content="30">
    <title>Register</title>
 
    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
   
     <link rel="stylesheet" href="style.css">
-   <!-- <link rel="stylesheet" href="css/style.css"> -->
+
   
 </head>
 <body>
 <?php 
     if(isset($message)){
         foreach($message as $message){
-            echo '<div class = "message" id="msg"  >'.$message.'</div>';
+           echo  '<div class="message" id="removenotif">'.$message.'</div>';
         }
-    }
+     }
+     
     ?>
 <div class="header">
         <div class="container">
@@ -104,15 +152,18 @@
                 </nav>
                 <a href="for cart.html"><img src="images/cart.png"></a>
                 <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                
     </div>
+    
 </div>
    
 
-<div class="account-page">
+<div class="account-page" onclick="removenotif()">
             <div class="containerpopup">
         
                  <br><br><br><br><br><br><br><br><br><br><br>
                  <br><br><br><br><br><br><br><br>
+                 
                  <div class="popup" id="myPopup">
                     
        <div class="row">
@@ -149,11 +200,11 @@
 
 <style>
 .popup{
-    /* background: rgba(0, 0, 0, 0.6); */
+    background: rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: 0px;
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -183,9 +234,28 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+
+.alert-simple.alert-danger
+{
+  border: 1px solid rgba(241, 6, 6, 0.81);
+    background-color: rgba(220, 17, 1, 0.16);
+    box-shadow: 0px 0px 2px #ff0303;
+    color: #ff0303;
+  transition:0.5s;
+  cursor:pointer;
+}
+
+.alert-simple.alert-success
+{
+  border: 1px solid rgba(36, 241, 6, 0.46);
+    background-color: rgba(7, 149, 66, 0.12156862745098039);
+    box-shadow: 0px 0px 2px #259c08;
+    color: #0ad406;
+  transition:0.5s;
+  cursor:pointer;
+}
+
 </style> 
-
-
 
 <!--FOOTER-->
 <div class="footer">
@@ -227,6 +297,13 @@ button {
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+
+<script>
+function removenotif() {
+  const element = document.getElementById("removenotif");
+  element.remove();
+}
+</script>
 
 <script>
     var LoginForm=document.getElementById("LoginForm");

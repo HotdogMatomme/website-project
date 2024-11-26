@@ -16,18 +16,18 @@
         <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="home.html"><img src="../images/logo.png" width="45px"></a>
+                <a href="../home.php"><img src="../images/logo1.png" width="45px"></a>
                 </div>
                 <nav> 
                     <ul id="MenuItems">
-                        <li><a href="../home.html">Home</a></li>
-                        <li><a href="../product.html">Product</a></li>
-                        <li><a href="../about us.html">About</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                        <li><a href="../login-regis.html">Account</a></li>
+                        <li><a href="../home.php">Home</a></li>
+                        <li><a href="../product.php">Product</a></li>
+                        <li><a href="../about us.php">About</a></li>
+                        <li><a href="../contact.php">Contact</a></li>
+                        <li><a href="../login-regis.php">Account</a></li>
                     </ul>
                 </nav>
-                <a href="for cart.html"><img src="../images/cart.png"></a>
+                <a href="for cart.php"><img src="../images/cart.png"></a>
                 <img src="../images/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
             </div>
@@ -63,8 +63,8 @@
                             <option>Medium</option> 
                             <option>Small</option> 
                         </select>
-                        <input type="number" value="1">
-                        <a href="../login-regis.php" class="btn"> Add to Cart</a>
+                        <a href="../login-regis.php" class="btn-a"><button class="btn">Buy </a></button>
+                        <a href="../login-regis.php" class="btn-a"><button class="btn"> Add to Cart</a></button>
 
                         <h3>Product Details</h3>
                         <br>
@@ -116,7 +116,7 @@
                                 </div>
                             </div>
                             <div class="footer-col-2">
-                                <img src="../images/logo.png" width="45px">
+                                <img src="../images/logo1white.png" width="45px">
                                 <p> STORE THAT SUPPORT ALL KINDS OF STYLE AND PREFERENCE </p>
                             </div>
                             <div class="footer-col-3">
@@ -185,4 +185,9 @@
 
 
     </body>
+    <style>
+        .btn-a{
+            color: white;
+        }
+    </style>
     </html>

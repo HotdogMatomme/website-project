@@ -16,7 +16,7 @@
         <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="home.php"><img src="images/logo.png" width="45px"></a>
+                <a href="home.php"><img src="images/logo1.png" width="45px"></a>
                 </div>
                 <nav> 
                     <ul id="MenuItems">
@@ -27,7 +27,7 @@
                         <li><a href="login-regis.php">Account</a></li>
                     </ul>
                 </nav>
-                <a href="for cart.html"><img src="images/cart.png"></a>
+                <a href="login-regis.php"><img src="images/cart.png"></a>
                 <img src="images/images/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
             </div>
@@ -128,7 +128,7 @@
                                 </div>
                             </div>
                             <div class="footer-col-2">
-                                <img src="logo.png" width="45px">
+                                <img src="images/logo1white.png" width="45px">
                                 <p> STORE THAT SUPPORT ALL KINDS OF STYLE AND PREFERENCE </p>
                             </div>
                             <div class="footer-col-3">
@@ -152,8 +152,6 @@
                         <p class="bottom"> EFFULGENT APPR. || Best Apparel Online Store </p>
                     </div>
                 </div>
-
-                <!--js for toggle menu-->
 
                 <script>  
                     var MenuItems=document.getElementById("MenuItems");

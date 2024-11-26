@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                             <div class="footer-col-2">
-                                <img src="images/logo.png" width="45px">
+                                <img src="images/logo1white.png" width="45px">
                                 <p> STORE THAT SUPPORT ALL KINDS OF STYLE AND PREFERENCE </p>
                             </div>
                             <div class="footer-col-3">
